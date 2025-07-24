@@ -49,7 +49,7 @@ export default function Checkout() {
       } else if (selected == "online") {
         const response = await checkout(
           cartInfo?.cartId,
-          "https://fresh-cart-one-theta.vercel.app",
+          `${window.location.origin}`,
           values
         );
 
