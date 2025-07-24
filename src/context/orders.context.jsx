@@ -1,6 +1,5 @@
 import { createContext } from "react";
 import { useContext, useEffect, useState } from "react";
-import { jwtDecode } from "jwt-decode";
 import { AuthContext } from "./Auth.context";
 import getOrdersById, { addNewOrder } from "../services/orders-service";
 import { apiClient } from "../services/api-client";
@@ -9,16 +8,11 @@ import { toast } from "react-toastify";
 
 export const OrdersContext = createContext(null);
 export default function OrdersProvider({ children }) {
-  const { token } = useContext(AuthContext);
+  const { token, userId } = useContext(AuthContext);
   const { clearYourCart } = useContext(CartContext);
   const [ordersInfo, setOrdersInfo] = useState(null);
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  let userId = null;
-  if (token) {
-    const decoded = jwtDecode(token);
-    userId = decoded?.id;
-  }
 
   async function handleUserOrders({ userId }) {
     try {
@@ -39,7 +33,6 @@ export default function OrdersProvider({ children }) {
       if (response.success) {
         toast.success("Order has been added Successfully");
         await clearYourCart();
-
         await handleUserOrders();
       }
     } catch (error) {

@@ -96,7 +96,7 @@ export default function Navbar() {
                 to={"allorders"}
               >
                 <FontAwesomeIcon className="text-lg" icon={faStore} />
-                <span className="text-sm">Orderss</span>
+                <span className="text-sm">Orders</span>
               </NavLink>
             </li>
 
@@ -267,7 +267,7 @@ export default function Navbar() {
                       fixedWidth
                       icon={faStore}
                     />
-                    <span className="text-sm">Orderss</span>
+                    <span className="text-sm">Orders</span>
                   </NavLink>
                 </li>
               </ul>

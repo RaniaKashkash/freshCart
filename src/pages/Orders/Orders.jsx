@@ -1,10 +1,21 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Pagemetadata from "../../components/Pagemetadata/Pagemetadata";
 import { OrdersContext } from "../../context/orders.context";
 import OrderItem from "../../components/OrderItem/OrderItem";
 import OrdersSkeleton from "../../components/Skeleton/OrdersSkeleton";
+import { useLocation } from "react-router";
+import { AuthContext } from "../../context/Auth.context";
+
 export default function Orders() {
-  const { isLoading, ordersInfo } = useContext(OrdersContext);
+  const { userId } = useContext(AuthContext);
+
+  const { isLoading, ordersInfo, handleUserOrders } = useContext(OrdersContext);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    handleUserOrders({ userId }); // أو أي اسم عندك في الـ context
+  }, [location.pathname]); // كل مرة تدخل صفحة جديدة، بتنعاد
 
   if (isLoading) {
     return <OrdersSkeleton />;

@@ -1,15 +1,17 @@
 import { createContext, useState } from "react";
 import { useLocation } from "react-router";
+import { jwtDecode } from "jwt-decode";
 
 export const AuthContext = createContext(null);
 export default function AuthProvider({ children }) {
   const [token, setToken] = useState(
     localStorage.getItem("token") || sessionStorage.getItem("token")
   );
-
-  const [user, setUser] = useState(
-    localStorage.getItem("userData") || sessionStorage.getItem("userData")
-  );
+  let userId = null;
+  if (token) {
+    const decoded = jwtDecode(token);
+    userId = decoded?.id;
+  }
 
   const [userEmail, setUserEmail] = useState(localStorage.getItem("userEmail"));
 
@@ -21,7 +23,7 @@ export default function AuthProvider({ children }) {
   }
   return (
     <AuthContext.Provider
-      value={{ token, setToken, userEmail, setUserEmail, logout }}
+      value={{ token, setToken, userEmail, setUserEmail, logout, userId }}
     >
       {children}
     </AuthContext.Provider>
