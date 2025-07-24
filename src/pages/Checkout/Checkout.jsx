@@ -43,7 +43,7 @@ export default function Checkout() {
         await createNewOrder(cartInfo?.cartId, values);
         if (ordersInfo) {
           setTimeout(() => {
-            navigate("/orders");
+            navigate("/allorders");
           }, 2000);
         }
       } else if (selected == "online") {
