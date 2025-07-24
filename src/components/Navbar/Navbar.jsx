@@ -93,7 +93,7 @@ export default function Navbar() {
                     isActive ? "text-primary-500" : ""
                   } flex flex-col gap-1 items-center hover:text-primary-500 transition-colors duration-200`;
                 }}
-                to={"orders"}
+                to={"allorders"}
               >
                 <FontAwesomeIcon className="text-lg" icon={faStore} />
                 <span className="text-sm">Orders</span>
@@ -260,7 +260,7 @@ export default function Navbar() {
                         isActive ? "text-primary-500 bg-primary-100" : ""
                       } flex gap-1 items-center px-2 py-3 hover:text-primary-500 transition-colors duration-200`;
                     }}
-                    to={"orders"}
+                    to={"allorders"}
                   >
                     <FontAwesomeIcon
                       className="text-lg"

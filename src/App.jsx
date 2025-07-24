@@ -87,17 +87,17 @@ function App() {
           element: <ForgetPassword />,
         },
         {
-          path: "orders",
+          path: "allorders",
           element: (
             <ProtectedRoute>
               <Orders />
             </ProtectedRoute>
           ),
         },
-        {
-          path: "allorders",
-          element: <Navigate to="/orders" replace />,
-        },
+        // {
+        //   path: "allorders",
+        //   element: <Navigate to="/orders" replace />,
+        // },
         {
           path: "product/:id",
           element: <ProductDetails />,
