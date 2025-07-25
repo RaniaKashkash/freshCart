@@ -54,7 +54,7 @@ export default function HomeDeals() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 py-6">
-            {deals.map((product) => (
+            {deals?.map((product) => (
               <ProductCart key={product.id} productInfo={product} />
             ))}
           </div>
