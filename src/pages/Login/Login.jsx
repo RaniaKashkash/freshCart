@@ -8,10 +8,6 @@ import {
   faShieldHalved,
   faTruck,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebook,
-  faGoogle,
-} from "@fortawesome/free-brands-svg-icons";
 import loginImg from "../../assets/images/login-img.png";
 import { Link, NavLink, useLocation, useNavigate } from "react-router";
 import { useFormik } from "formik";
@@ -90,7 +86,7 @@ export default function Login() {
     <>
       <Pagemetadata title="Login" description="login,email,password" />
       <main className="py-12">
-        <div className="container grid lg:grid-cols-2 lg:gap-12">
+        <div className="container flex flex-col items-center justify-center lg:flex-row lg:gap-12">
           {/* left side */}
           <div className="py-10 space-y-8 flex flex-col justify-center items-center">
             <div className="image size-90 mb-3">
@@ -141,23 +137,8 @@ export default function Login() {
             <div className="title text-center">
               <h2 className="text-3xl font-bold">Create Your Account</h2>
               <p className="text-sm text-gray-500 mt-1 min-w-[400px]">
-                Sign in tocontinue yourfresh shopping experience
+                Sign in to continue your fresh shopping experience
               </p>
-            </div>
-            <div className="button space-y-5">
-              <button className="btn bg-transparent w-full hover:bg-gray-100 ">
-                <FontAwesomeIcon className="text-red-500" icon={faGoogle} />
-                <span className="mx-2">Google</span>
-              </button>
-              <button className="btn bg-transparent w-full hover:bg-gray-100 ">
-                <FontAwesomeIcon className="text-blue-500" icon={faFacebook} />
-                <span className="mx-2">Facebook</span>
-              </button>
-            </div>
-            <div className="relative w-full h-0.5 bg-gray-200">
-              <span className="absolute left-1/2 top-1/2 -translate-1/2 bg-white rounded-full px-2 text-sm uppercase">
-                or continue with email
-              </span>
             </div>
             <form
               action=""

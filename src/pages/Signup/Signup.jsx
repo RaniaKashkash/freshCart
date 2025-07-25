@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf, faStar, faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import authotPic from "../../assets/images/review-author.png";
 import { NavLink, useNavigate } from "react-router";
 import { useFormik } from "formik";
@@ -158,21 +157,7 @@ export default function Signup() {
                 Start your fresh journey with us today
               </p>
             </div>
-            <div className="button flex gap-5 *:grow-1">
-              <button className="btn bg-transparent hover:bg-gray-100 ">
-                <FontAwesomeIcon className="text-red-500" icon={faGoogle} />
-                <span className="mx-2">Google</span>
-              </button>
-              <button className="btn bg-transparent hover:bg-gray-100 ">
-                <FontAwesomeIcon className="text-blue-500" icon={faFacebook} />
-                <span className="mx-2">Facebook</span>
-              </button>
-            </div>
-            <div className="relative w-full h-0.5 bg-gray-200">
-              <span className="absolute left-1/2 top-1/2 -translate-1/2 bg-white rounded-full px-2 text-sm">
-                OR
-              </span>
-            </div>
+
             <form
               action=""
               className="space-y-4"
