@@ -23,9 +23,9 @@ export default function Cart() {
       <Pagemetadata title="Shopping Cart" />
       {cartInfo && (
         <div className="container">
-          <div className="flex flex-col lg:grid lg:grid-cols-3 my-8 gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 my-8 gap-10 items-start">
             {/* left side */}
-            <div className=" col-span-2 border-1 border-gray-200 rounded-lg p-4 space-y-4 ">
+            <div className="lg:col-span-2  border-1 border-gray-200 rounded-lg p-4 space-y-4 ">
               <div className="flex border-b-1 border-b-gray-200 items-center justify-between">
                 <div className="space-y-1  py-4">
                   <h2 className="text-xl font-semibold">Shopping Cart</h2>
@@ -72,7 +72,7 @@ export default function Cart() {
               </div>
             </div>
             {/* Right side */}
-            <div className="border-1 border-gray-200 rounded-lg px-4 py-8 space-y-5">
+            <div className="border-1  border-gray-200 rounded-lg px-4 py-8 space-y-5">
               <h3 className="text-lg font-semibold mb-0">Order Summary</h3>
               <div className="details *:flex *:items-center *:justify-between  space-y-4 border-b-1 border-b-gray-200 py-2">
                 <div className="">
