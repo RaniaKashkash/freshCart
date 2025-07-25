@@ -53,7 +53,6 @@ export default function ProductInfo({ productDetails }) {
     }
     setIsFavourite(!isFavourite);
   };
-  if (isLoading) return <ProductInfoSkeleton />;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -69,6 +68,8 @@ export default function ProductInfo({ productDetails }) {
       }
     }
   }, [cartInfo, id]);
+
+  if (isLoading) return <ProductInfoSkeleton />;
 
   return (
     <>

@@ -20,8 +20,6 @@ export default function CartProvider({ children }) {
 
   async function handleAddProductToCart({ id }) {
     try {
-      setLoading(true);
-
       const response = await addProductToCart({ id });
       if (response.success) {
         setLoading(false);

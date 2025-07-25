@@ -15,7 +15,7 @@ export default function RelatedProductsSkeleton() {
             </div>
           </div>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 w-full">
             {[...Array(5)].map((_, i) => (
               <div
                 key={i}

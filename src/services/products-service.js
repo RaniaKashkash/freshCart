@@ -1,6 +1,6 @@
 import { apiClient } from "./api-client";
 
-export async function getAllProduct({
+export  async function getAllProduct({
   page,
   keyword,
   priceGreaterThan,

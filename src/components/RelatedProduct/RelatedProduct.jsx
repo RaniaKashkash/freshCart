@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Loading from "../Loading/Loading";
+import { useEffect, useState } from "react";
 import { getAllProduct } from "../../services/products-service";
 import ProductCart from "../ProductCard/ProductCart";
 
