@@ -105,10 +105,8 @@ export default function CartProvider({ children }) {
 
   async function clearYourCart() {
     try {
-      const toastId = toast.loading("Clearing the cart, please wait...");
       const response = await clearUserCart();
       if (response.success) {
-        toast.dismiss(toastId);
         setLoading(false);
         await handleGetCartItems();
         toast.success("Cart has been cleared successfully");

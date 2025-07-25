@@ -12,6 +12,7 @@ export default function AuthProvider({ children }) {
     const decoded = jwtDecode(token);
     userId = decoded?.id;
   }
+  console.log(userId);
 
   const [userEmail, setUserEmail] = useState(localStorage.getItem("userEmail"));
 

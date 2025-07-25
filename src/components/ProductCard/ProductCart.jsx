@@ -91,7 +91,11 @@ export default function ProductCart({ productInfo }) {
         </div>
 
         <div className="actions text-gray-500 absolute flex flex-col gap-4 top-4 right-4 *:hover:text-primary-500 transition-colors duration-200">
-          <button onClick={handleToggleFavorite}>
+          <button
+            onClick={() => {
+              token ? handleToggleFavorite() : navigate("/login");
+            }}
+          >
             <FontAwesomeIcon
               icon={faHeart}
               className={isFavourite ? "text-red-600" : "text-gray-400"}

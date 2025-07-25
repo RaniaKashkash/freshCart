@@ -39,12 +39,6 @@ export default function NotFound() {
               <span>Back to home</span>
             </Link>
           </button>
-          <button className="*:flex *:gap-x-2 *:items-center btn text-gray-800 border-gray-300! hover:bg-gray-100 transition-colors duration-200">
-            <Link to={"/"}>
-              <FontAwesomeIcon icon={faSearch} />
-              <span>Search Products</span>
-            </Link>
-          </button>
         </div>
       </div>
     </>

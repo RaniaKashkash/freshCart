@@ -5,7 +5,6 @@ import { useFormik } from "formik";
 import { useNavigate } from "react-router";
 import * as yup from "yup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { forgetPassword } from "../../services/auth-service";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -52,7 +51,7 @@ export default function ForgetPassword() {
         <div className="bg-white shadow-md rounded-xl p-8 max-w-md w-full my-10">
           <div className="flex flex-col items-center mb-6">
             <div className="bg-green-100 text-green-600 p-3 size-12 flex items-center justify-center rounded-full mb-3">
-              <FontAwesomeIcon icon={faUser} className="text-lg"/>
+              <FontAwesomeIcon icon={faUser} className="text-lg" />
             </div>
             <h2 className="text-xl font-semibold">Forget Password</h2>
             <p className="text-sm text-gray-500 mt-2 text-center">

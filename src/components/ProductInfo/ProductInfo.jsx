@@ -30,8 +30,12 @@ export default function ProductInfo({ productDetails }) {
     ratingsAverage,
     ratingsQuantity,
   } = productDetails;
-  const { handleAddProductToCart, cartInfo, isLoading, removeProductFromCart } =
-    useContext(CartContext);
+  const {
+    handleAddProductToCart,
+    cartInfo,
+    isLoading,
+    handleDeleteProductFromCart,
+  } = useContext(CartContext);
   const [inCart, setInCart] = useState(false);
   const { token } = useContext(AuthContext);
   const { handleAddWishlistProduct, wishlistProduct, removeWishlistItem } =
@@ -96,7 +100,9 @@ export default function ProductInfo({ productDetails }) {
                 </span>
                 <div className="flex gap-2 *:cursor-pointer *:hover:text-primary-500 *:transition-colors *:duration-200 ">
                   <FontAwesomeIcon
-                    onClick={handleToggleFavorite}
+                    onClick={() => {
+                      token ? handleToggleFavorite() : navigate("/login");
+                    }}
                     icon={faHeart}
                     className={isFavourite ? "text-red-600" : "text-gray-400"}
                   />
@@ -137,7 +143,7 @@ export default function ProductInfo({ productDetails }) {
                       "btn bg-red-600 text-white hover:bg-red-700 transition-colors duration-200"
                     }
                     onClick={() => {
-                      removeProductFromCart({ id });
+                      handleDeleteProductFromCart({ id });
                     }}
                   >
                     <FontAwesomeIcon icon={faCartShopping} />
