@@ -23,7 +23,7 @@ export default function Cart() {
       <Pagemetadata title="Shopping Cart" />
       {cartInfo && (
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-3 my-8 gap-10  items-start">
+          <div className="flex flex-col lg:grid lg:grid-cols-3 my-8 gap-10 items-start">
             {/* left side */}
             <div className=" col-span-2 border-1 border-gray-200 rounded-lg p-4 space-y-4 ">
               <div className="flex border-b-1 border-b-gray-200 items-center justify-between">

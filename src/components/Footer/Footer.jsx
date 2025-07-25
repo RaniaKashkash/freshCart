@@ -26,22 +26,22 @@ export default function Footer() {
               </p>
               <ul className="flex items-center gap-4 *:text-gray-500 text-lg *:hover:text-primary-600 *:transition-colors *:duration-200">
                 <li>
-                  <a href="#">
+                  <a href="https://www.facebook.com/">
                     <FontAwesomeIcon icon={faFacebookF} />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://x.com/">
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.instagram.com/">
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.pinterest.com/">
                     <FontAwesomeIcon icon={faPinterestP} />
                   </a>
                 </li>
@@ -51,19 +51,19 @@ export default function Footer() {
               <h2 className="text-lg font-semibold mb-2">Categories</h2>
               <ul className="space-y-3 *:hover:text-primary-600 *:transition-colors *:duration-200">
                 <li>
-                  <Link to={``}>Men's Fashion</Link>
+                  <Link to={`categories`}>Men's Fashion</Link>
                 </li>
                 <li>
-                  <Link to={``}>Women's Fashion</Link>
+                  <Link to={`categories`}>Women's Fashion</Link>
                 </li>
                 <li>
-                  <Link to={``}>Baby & Toys</Link>
+                  <Link to={`categories`}>Baby & Toys</Link>
                 </li>
                 <li>
-                  <Link to={``}>Beauty & Health</Link>
+                  <Link to={`categories`}>Beauty & Health</Link>
                 </li>
                 <li>
-                  <Link to={``}>Electronics</Link>
+                  <Link to={`categories`}>Electronics</Link>
                 </li>
               </ul>
             </div>
@@ -91,10 +91,10 @@ export default function Footer() {
               <h2 className="text-lg font-semibold mb-2">Customer Services</h2>
               <ul className="space-y-3 *:hover:text-primary-600 *:transition-colors *:duration-200">
                 <li>
-                  <Link to={`/account`}>My Account</Link>
+                  <Link to={`/allorders`}>My Account</Link>
                 </li>
                 <li>
-                  <Link to={`/orders`}>My Orders</Link>
+                  <Link to={`/allorders`}>My Orders</Link>
                 </li>
                 <li>
                   <Link to={`/wishlist`}>WishList</Link>
@@ -103,7 +103,7 @@ export default function Footer() {
                   <Link to={`/return-and-refund`}>Return & Refund</Link>
                 </li>
                 <li>
-                  <Link to={`/help=center`}>Help Center</Link>
+                  <Link to={`/help-center`}>Help Center</Link>
                 </li>
               </ul>
             </div>

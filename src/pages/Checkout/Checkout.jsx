@@ -78,7 +78,7 @@ export default function Checkout() {
       <Pagemetadata title="Check Out" />
       <section className="bg-gray-100/30">
         <div className="container max-w-5xl py-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3   gap-10 items-start">
+          <div className="flex flex-col  lg:grid  lg:grid-cols-3 gap-10 lg:items-start mx-auto">
             <div className="col-span-2">
               <div className="">
                 <div className="bg-white rounded-lg p-4 shadow-sm mb-6">
